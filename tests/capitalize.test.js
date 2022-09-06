@@ -1,5 +1,17 @@
-import sum from '../capitalize.js';
+import capitalize from '../capitalize.js';
 
-test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1, 2)).toBe(3);
+test('kittens to be Kittens', () => {
+    expect(capitalize('kittens')).toBe('Kittens');
+});
+
+test('kiTTenS to be Kittens', () => {
+    expect(capitalize('kiTTenS')).toBe('Kittens');
+});
+
+test('I LIKE KITTENS. to be I like kittens.', () => {
+    expect(capitalize('I LIKE KITTENS.')).toBe('I like kittens.');
+});
+
+test('"" to be ""', () => {
+    expect(capitalize("")).toBe("");
 });
