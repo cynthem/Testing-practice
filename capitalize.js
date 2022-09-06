@@ -2,4 +2,4 @@ function sum(a, b) {
     return a + b;
 }
 
-module.e
+export default sum;
