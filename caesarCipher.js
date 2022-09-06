@@ -1,32 +1,26 @@
 function getCodes(str) {
-    let codes;
+    let codes = [];
     for (let i = 0; i < str.length; i++) {
-        codes += str.charCodeAt(i);
+        let code = str.charCodeAt(i) + 1;
+        codes.push(code);
     }
     return codes;
 }
 
-function shiftCodes(codes) {
-    let shiftedCodes;
-    for (let i = 0; i < codes.length; i++){
-        shiftedCodes += codes[i] + 1;
-    }
-    return shiftedCodes;
-}
-
 function codesIntoChars(shiftedCodes) {
-    let shiftedString;
+    let shiftedString = [];
     for (let i = 0; i < shiftedCodes.length; i++) {
-        shiftedString += String.fromCharCode(shiftCodes[i]);
+        shiftedString += String.fromCharCode(shiftedCodes[i]);
     }
     return shiftedString;
 }
 
 function caesarCipher(str) {
     const codes = getCodes(str);
-    const shiftedCodes = shiftCodes(codes);
-    const shiftedString = codesIntoChars(shiftedCodes);
+    const shiftedString = codesIntoChars(codes);
     return shiftedString;
 }
+
+caesarCipher('abcd');
 
 export default caesarCipher;
