@@ -1,7 +1,12 @@
 function getCodes(str) {
     let codes = [];
     for (let i = 0; i < str.length; i++) {
-        let code = str.charCodeAt(i) + 1;
+        let code;
+        if (str.charCodeAt(i) === 32) {
+            code = str.charCodeAt(i);
+        } else {
+            code = str.charCodeAt(i) + 1;
+        }
         codes.push(code);
     }
     return codes;
@@ -21,6 +26,6 @@ function caesarCipher(str) {
     return shiftedString;
 }
 
-caesarCipher('abcd');
+caesarCipher('Hi there!');
 
 export default caesarCipher;
