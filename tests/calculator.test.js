@@ -39,3 +39,7 @@ test('divide 1 / 2 to equal 0.5', () => {
 test('divide 2 / 0 to equal 0', () => {
     expect(divide(2, 0)).toBe(0);
 });
+
+test('divide 3 / 1.5 to equal 2', () => {
+    expect(divide(3, 1.5)).toBe(2);
+});

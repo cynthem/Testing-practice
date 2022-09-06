@@ -14,7 +14,7 @@ function divide(a, b) {
     if (a === 0 || b === 0) {
         return 0;
     } else {
-        return a / b;
+        return ((a * 10) / (b * 10)) / 10;
     }
 }
 
